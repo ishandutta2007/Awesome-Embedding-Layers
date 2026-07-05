@@ -2,7 +2,19 @@
   <img src="assets/banner.svg" alt="Awesome Embedding Layers Banner">
 </p>
 
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <!-- MORE BADGES HERE -->
+</p>
+
 # 🌌 Awesome-Embedding-Layers
+
+<div align="center">
+  <strong>Comprehensive Curated List of Embedding Layers in Artificial Intelligence, Machine Learning, and Deep Learning</strong>
+  <br>
+  <em>Keywords: AI, Machine Learning, Embedding Layers, Vector Database, LLM, Neural Networks, Deep Learning, Vision Transformers, RoPE</em>
+</div>
 ## 🧠 Embedding Layers in AI: History, Progression, Variants, & Applications
 
 An **Embedding Layer** is a foundational structural component in deep learning architectures designed to transform discrete, high-dimensional categorical tokens (such as individual word IDs, user keys, or pixel values) into low-dimensional, continuous-valued dense vectors. In early machine learning infrastructure, discrete features were represented via sparse **One-Hot Encoding** arrays, where each token was mapped to an isolated binary vector whose length matched the absolute size of the vocabulary. This created severe memory bottlenecks and treated all entities as orthogonally independent, rendering the system incapable of tracking relational affinity. 
