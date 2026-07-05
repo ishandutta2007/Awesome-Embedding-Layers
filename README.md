@@ -1,5 +1,9 @@
-# Awesome-Embedding-Layers
-## Embedding Layers in AI: History, Progression, Variants, & Applications
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Embedding Layers Banner">
+</p>
+
+# 🌌 Awesome-Embedding-Layers
+## 🧠 Embedding Layers in AI: History, Progression, Variants, & Applications
 
 An **Embedding Layer** is a foundational structural component in deep learning architectures designed to transform discrete, high-dimensional categorical tokens (such as individual word IDs, user keys, or pixel values) into low-dimensional, continuous-valued dense vectors. In early machine learning infrastructure, discrete features were represented via sparse **One-Hot Encoding** arrays, where each token was mapped to an isolated binary vector whose length matched the absolute size of the vocabulary. This created severe memory bottlenecks and treated all entities as orthogonally independent, rendering the system incapable of tracking relational affinity. 
 
@@ -7,7 +11,7 @@ Embedding layers solve this crisis by acting as a learnable lookup table ($W \in
 
 ---
 
-## 1. The Macro Chronological Evolution
+## 📅 1. The Macro Chronological Evolution
 
 The implementation of continuous layer tokenization has transitioned from static non-contextual lookups to deep recurrent sequence captures, parallel self-attention matrices, and modern multi-modal patch-fused latent workspaces.
 
@@ -29,7 +33,7 @@ flowchart LR
 
 ---
 
-## 2. Core Functional & Compression Variants
+## ⚙️ 2. Core Functional & Compression Variants
 
 Embedding layers are strictly categorized based on how parameters are initialized, mapped, and mathematically regularized across the optimization graph.
 
@@ -42,7 +46,7 @@ Embedding layers are strictly categorized based on how parameters are initialize
 
 ---
 
-## 3. High-Capacity Dimension Reduction & Compression Classes
+## 🗜️ 3. High-Capacity Dimension Reduction & Compression Classes
 
 To deploy massive embedding vocabularies across resource-constrained edge systems or high-throughput servers, engineering frameworks implement specialized loss constraints.
 
@@ -67,7 +71,7 @@ D --> E["Compact Embedding<br/>≈80% Less Storage"]
 
 ---
 
-## 4. Production Engineering Challenges & Hardware Solutions
+## 🏭 4. Production Engineering Challenges & Hardware Solutions
 
 Scaling embedding tables to match web-scale multilingual vocabularies introduces intense VRAM allocation caps and memory-bus bottlenecks.
 
@@ -78,7 +82,7 @@ Scaling embedding tables to match web-scale multilingual vocabularies introduces
 
 ---
 
-## 5. Frontier Real-World AI Industrial Applications
+## 🚀 5. Frontier Real-World AI Industrial Applications
 
 | Application | Details | Year First Used | Paper Link |
 | :--- | :--- | :--- | :--- |
@@ -88,7 +92,7 @@ Scaling embedding tables to match web-scale multilingual vocabularies introduces
 
 ---
 
-## References
+## 📚 References
 1. Mikolov, T., et al. (2013). Distributed representations of words and phrases and their compositionality. *Advances in Neural Information Processing Systems (NeurIPS)*, 26, 3111-3119.
 2. Pennington, J., Socher, R., & Manning, C. D. (2014). GloVe: Global vectors for word representation. *Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)*, 1532-1543.
 3. Devlin, J., et al. (2018). BERT: Pre-training of deep bidirectional transformers for language understanding: Contextual attentional projections. *arXiv preprint arXiv:1810.04805* [INDEX: 1].
