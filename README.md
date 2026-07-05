@@ -13,7 +13,11 @@ The implementation of continuous layer tokenization has transitioned from static
 
 
 ```mermaid
-[One-Hot Encodings (Pre-2013)] ───> [Static Feature Lookups (Word2Vec, 2013)] ───> [Contextual Embeddings (BERT/ELMo, 2018)] ───> [Multi-Modal Patch Tokenizers (Modern Era)](Exploded Sparse Memory ceils)       (Immutable Global Concept Coordinates)          (Dynamic Attentional Hidden Projections)         (Unified Cross-Sensory Shared Manifolds)
+flowchart LR
+    A["One-Hot Encodings (Pre-2013)<br/>(Sparse Discrete Token Representations)"]
+    --> B["Static Word Embeddings (Word2Vec, 2013)<br/>(Dense Context-Independent Vectors)"]
+    --> C["Contextual Embeddings (ELMo / BERT, 2018)<br/>(Context-Dependent Token Representations)"]
+    --> D["Multimodal Token Embeddings (Modern Era)<br/>(Shared Vision–Language Representation Space)"]
 ```
 
 *   **The Sparse One-Hot & Lookup-Free Era (Traditional ML Baseline)**
@@ -61,7 +65,17 @@ To deploy massive embedding vocabularies across resource-constrained edge system
 
 
 ```mermaid
-Matryoshka Nested Dimension TruncationDense Vector Length: 1536 Dimensions ────────────────────────────────────────────────────────┐┌─────────────────────────┬──────────────────────────────────────────────────────────────────┐│ High-Yield Core Signals │ Long-Tail Auxiliary Fine Detail Nuances                          │└─────────────────────────┴──────────────────────────────────────────────────────────────────┘Sliced Vector: 256 Dim              (Truncated at Runtime to Save 80% Storage)
+flowchart TB
+
+A["Dense Embedding<br/>1536 Dimensions"]
+
+A --> B["High-Yield Core Dimensions<br/>(Most Semantic Information)"]
+A --> C["Long-Tail Auxiliary Dimensions<br/>(Fine-Grained Semantic Detail)"]
+
+B --> D["Truncate to 256 Dimensions"]
+C -. "Discard During Truncation" .-> D
+
+D --> E["Compact Embedding<br/>≈80% Less Storage"]
 ```
 
 *   **Vector Quantization Codebooks (VQ-VAE / Tokenizers)**
