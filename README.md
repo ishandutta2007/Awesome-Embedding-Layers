@@ -130,3 +130,15 @@ Before updating this documentation layout, let me know how you would like to pro
 * I can generate a **Markdown matrix table** tracking the explicit dictionary capacities, hidden dimension steps, and vocabulary scaling constants of the leading open-weight text and image embedding models.
 * I can write a detailed technical explanation focusing on the **mathematical mechanics of Rotary Position Embeddings (RoPE)** and how complex coordinate rotations prevent structural position decay over infinite contexts [INDEX: 18].
 2 sitesGemini Embedding 2: First Multimodal Embedding Model (2026)13 Mar 2026 — First, the 8,192 token context window - that's four times what embedding-001 offered, and it matters enormously for embedding long...Build Fast with AIWhat Are Embeddings in AI? How Vector Representations Work1536-dim often matches or beats 3072-dim on standard retrieval benchmarks while using half the storage and compute. Matryoshka emb...Dyyota
+
+
+## ⭐ Star History
+<div align="center">
+<a href="https://www.star-history.com/?repos=ishandutta2007%2FAwesome-Embedding-Layers&type=date&legend=bottom-right">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Embedding-Layers&type=date&theme=dark&legend=bottom-right" />
+<source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Embedding-Layers&type=date&legend=bottom-right" />
+<img alt="Star History Chart" src="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Embedding-Layers&type=date&legend=bottom-right" />
+</picture>
+</a>
+</div>
