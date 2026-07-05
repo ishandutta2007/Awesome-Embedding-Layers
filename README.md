@@ -35,19 +35,19 @@ The implementation of continuous layer tokenization has transitioned from static
 
 Embedding layers are strictly categorized based on how parameters are initialized, mapped, and mathematically regularized across the optimization graph.
 
-### A. Token Lookup Embedding Layers (Standard Baseline)
-*   **Mechanism:** Functions as a simple parameterized weight matrix multiplication where input token IDs act as hot indices. A forward pass step zero is mathematically equivalent to fetching the $i$-th row of the weight tensor via an optimized pointer lookup, bypassing heavy matrix multiplication cycles.
-*   **Condition:** Requires strict vocabulary masking and absolute input padding tracking to handle variable-length sequences cleanly.
+- ### A. Token Lookup Embedding Layers (Standard Baseline)
+	*   **Mechanism:** Functions as a simple parameterized weight matrix multiplication where input token IDs act as hot indices. A forward pass step zero is mathematically equivalent to fetching the $i$-th row of the weight tensor via an optimized pointer lookup, bypassing heavy matrix multiplication cycles.
+	*   **Condition:** Requires strict vocabulary masking and absolute input padding tracking to handle variable-length sequences cleanly.
 
-### B. Linear Patch Embedding Layers (ViT Vision Frontends)
-*   **Mechanism:** Ingests a high-resolution pixel canvas ($X \in \mathbb{R}^{H \times W \times C}$) [INDEX: 5]. The module applies a 2D convolutional layer with a kernel size and stride exactly equal to the targeted patch dimension (typically $14 \times 14$ or $16 \times 16$) [INDEX: 5]. This flattens the local spatial arrays into a linear sequence of dense vector channels, projecting image blocks like text words [INDEX: 5].
+- ### B. Linear Patch Embedding Layers (ViT Vision Frontends)
+	*   **Mechanism:** Ingests a high-resolution pixel canvas ($X \in \mathbb{R}^{H \times W \times C}$) [INDEX: 5]. The module applies a 2D convolutional layer with a kernel size and stride exactly equal to the targeted patch dimension (typically $14 \times 14$ or $16 \times 16$) [INDEX: 5]. This flattens the local spatial arrays into a linear sequence of dense vector channels, projecting image blocks like text words [INDEX: 5].
 
-### C. Adaptive / Tiered Embedding Tables
-*   **Mechanism:** Formulated to resolve memory-bandwidth bottlenecks when dealing with massive vocabulary dictionaries (e.g., >256,000 international tokens). It assigns wide, high-precision channels to frequent tokens (like `the`), while assigning thin, highly compressed channels to rare technical tokens, deploying linear projections to align dimensions before passing tensors to hidden states.
+- ### C. Adaptive / Tiered Embedding Tables
+	*   **Mechanism:** Formulated to resolve memory-bandwidth bottlenecks when dealing with massive vocabulary dictionaries (e.g., >256,000 international tokens). It assigns wide, high-precision channels to frequent tokens (like `the`), while assigning thin, highly compressed channels to rare technical tokens, deploying linear projections to align dimensions before passing tensors to hidden states.
 
-### D. Rotary & Geometric Position Embeddings (RoPE)
-*   **Mechanism:** Moves away from adding flat static value coordinates to token tensors [INDEX: 18]. Instead, it multiplies the query and key embedding vectors by a complex rotation matrix inside the self-attention block [INDEX: 18].
-*   **Pros:** Encodes relative chronological distance and time offsets geometrically as an angle, allowing context windows to scale past 128k+ thresholds cleanly without feature distortion [INDEX: 18, 22].
+- ### D. Rotary & Geometric Position Embeddings (RoPE)
+	*   **Mechanism:** Moves away from adding flat static value coordinates to token tensors [INDEX: 18]. Instead, it multiplies the query and key embedding vectors by a complex rotation matrix inside the self-attention block [INDEX: 18].
+	*   **Pros:** Encodes relative chronological distance and time offsets geometrically as an angle, allowing context windows to scale past 128k+ thresholds cleanly without feature distortion [INDEX: 18, 22].
 
 ---
 
